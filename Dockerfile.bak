@@ -1,0 +1,17 @@
+FROM maven:3.8.5-jdk-8 as builder_kms
+
+
+COPY pom.xml /usr/src/app/
+COPY lib /usr/src/app/lib
+COPY jsignpdf-itxt /usr/src/app/jsignpdf-itxt
+RUN mvn -f /usr/src/app/pom.xml dependency:resolve
+COPY src /usr/src/app/src
+RUN mvn -f /usr/src/app/pom.xml clean package
+
+FROM java:8
+
+COPY --from=builder_kms /usr/src/app/target/kms-0.0.1-SNAPSHOT.jar /usr/app/kms-0.0.1-SNAPSHOT.jar
+COPY jks /jks
+COPY testerkeystore /testerkeystore
+RUN mkdir /logs/
+ENTRYPOINT ["java", "-jar", "/usr/app/kms-0.0.1-SNAPSHOT.jar"]

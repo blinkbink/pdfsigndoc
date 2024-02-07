@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.ejbca.cesecore</groupId>
+    <artifactId>cesecore</artifactId>
+    <version>6.4.1</version>
+    <packaging>pom</packaging>
+    <name>cesecore</name>
+    <description>CE Security Core</description>
+    <scm>
+        <connection>scm:svn:https://svn.cesecore.eu/svn/ejbca/trunk/ejbca/</connection>
+        <developerConnection>scm:svn:https://svn.cesecore.eu/svn/ejbca-restricted/trunk/ejbca/</developerConnection>
+        <url>http://fisheye.primekey.se/browse/EJBCA/trunk/ejbca</url>
+    </scm>
+    <url>https://www.ejbca.org</url>
+    <licenses>
+        <license>
+            <name>LGPL license, Version 2.1</name>
+            <url>https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>Tomas Gustavsson</name>
+            <email>info@primekey.se</email>
+            <organization>PrimeKey Solutions AB</organization>
+            <organizationUrl>https://www.primekey.se</organizationUrl>
+        </developer>
+        <developer>
+            <name>Lars Silven</name>
+            <email>info@primekey.se</email>
+            <organization>PrimeKey Solutions AB</organization>
+            <organizationUrl>https://www.primekey.se</organizationUrl>
+        </developer>
+        <developer>
+            <name>Johan Eklund</name>
+            <email>info@primekey.se</email>
+            <organization>PrimeKey Solutions AB</organization>
+            <organizationUrl>https://www.primekey.se</organizationUrl>
+        </developer>
+        <developer>
+            <name>Markus Kilås</name>
+            <email>info@primekey.se</email>
+            <organization>PrimeKey Solutions AB</organization>
+            <organizationUrl>https://www.primekey.se</organizationUrl>
+        </developer>
+        <developer>
+            <name>Aveen Ismail</name>
+            <email>info@primekey.se</email>
+            <organization>PrimeKey Solutions AB</organization>
+            <organizationUrl>https://www.primekey.se</organizationUrl>
+        </developer>
+        <developer>
+            <name>Mike Kushner</name>
+            <email>info@primekey.se</email>
+            <organization>PrimeKey Solutions AB</organization>
+            <organizationUrl>https://www.primekey.se</organizationUrl>
+        </developer>
+        <developer>
+            <name>Samuel Liden Borell</name>
+            <email>info@primekey.se</email>
+            <organization>PrimeKey Solutions AB</organization>
+            <organizationUrl>https://www.primekey.se</organizationUrl>
+        </developer>
+        <developer>
+            <name>Marcus Lundblad</name>
+            <email>info@primekey.se</email>
+            <organization>PrimeKey Solutions AB</organization>
+            <organizationUrl>https://www.primekey.se</organizationUrl>
+        </developer>
+    </developers>
+    <modules>
+        <module>../cesecore-common</module>
+        <module>../cesecore-ejb-interface</module>
+        <module>../cesecore-entity</module>
+        <module>../cesecore-ejb</module>
+    </modules>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+</project>

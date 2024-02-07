@@ -1,0 +1,146 @@
+2853 [main] INFO  id.idtrust.signing.KmsApplication - Starting KmsApplication using Java 1.8.0_191 on blinkbink with PID 17680 (C:\SNI\Digisign\mitraapi\kms\target\classes started by 62856 in C:\SNI\Digisign\mitraapi\kms)
+2868 [main] INFO  id.idtrust.signing.KmsApplication - No active profile set, falling back to default profiles: default
+5457 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+5466 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+5567 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 0 Redis repository interfaces.
+7490 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8089 (http)
+8028 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4981 ms
+8963 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+9155 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 3 mappings in 'requestMappingHandlerMapping'
+9257 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+9283 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+13007 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8089 (http) with context path ''
+13040 [main] INFO  id.idtrust.signing.KmsApplication - Started KmsApplication in 11.831 seconds (JVM running for 16.046)
+Starting KmsApplication using Java 1.8.0_191 on blinkbink with PID 20148 (C:\SNI\Digisign\mitraapi\kms\target\classes started by 62856 in C:\SNI\Digisign\mitraapi\kms)
+No active profile set, falling back to default profiles: default
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+Finished Spring Data repository scanning in 37 ms. Found 0 Redis repository interfaces.
+Tomcat initialized with port(s): 8089 (http)
+Root WebApplicationContext: initialization completed in 4582 ms
+ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+3 mappings in 'requestMappingHandlerMapping'
+Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+Tomcat started on port(s): 8089 (http) with context path ''
+Started KmsApplication in 12.657 seconds (JVM running for 17.689)
+Starting KmsApplication using Java 1.8.0_191 on blinkbink with PID 20996 (C:\SNI\Digisign\mitraapi\kms\target\classes started by 62856 in C:\SNI\Digisign\mitraapi\kms)
+No active profile set, falling back to default profiles: default
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+Finished Spring Data repository scanning in 58 ms. Found 0 Redis repository interfaces.
+Tomcat initialized with port(s): 8089 (http)
+Root WebApplicationContext: initialization completed in 5996 ms
+ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+3 mappings in 'requestMappingHandlerMapping'
+Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+Tomcat started on port(s): 8089 (http) with context path ''
+Started KmsApplication in 13.889 seconds (JVM running for 17.966)
+Initializing Servlet 'dispatcherServlet'
+Detected StandardServletMultipartResolver
+Detected AcceptHeaderLocaleResolver
+Detected FixedThemeResolver
+Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1614749
+Detected org.springframework.web.servlet.support.SessionFlashMapManager@2c1f8f
+enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+Completed initialization in 9 ms
+GET "/DSKeyCore/data", parameters={}
+Mapped to com.digisign.kms.controller.DocAccessController#getData()
+[INFO] : query
+Found 'Content-Type:application/json' in response
+Writing ["{"status":"asd"}"]
+Completed 200 OK
+Starting KmsApplication using Java 1.8.0_191 on blinkbink with PID 27828 (C:\SNI\Digisign\mitraapi\kms\target\classes started by 62856 in C:\SNI\Digisign\mitraapi\kms)
+No active profile set, falling back to default profiles: default
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+Finished Spring Data repository scanning in 33 ms. Found 0 Redis repository interfaces.
+Tomcat initialized with port(s): 8089 (http)
+Root WebApplicationContext: initialization completed in 4766 ms
+ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+3 mappings in 'requestMappingHandlerMapping'
+Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+Tomcat started on port(s): 8089 (http) with context path ''
+Started KmsApplication in 12.7 seconds (JVM running for 17.52)
+Initializing Servlet 'dispatcherServlet'
+Detected StandardServletMultipartResolver
+Detected AcceptHeaderLocaleResolver
+Detected FixedThemeResolver
+Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@b4dd16
+Detected org.springframework.web.servlet.support.SessionFlashMapManager@17283a2
+enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+Completed initialization in 13 ms
+GET "/DSKeyCore/data", parameters={}
+Mapped to com.digisign.kms.controller.DocAccessController#getData()
+[INFO] : query
+Found 'Content-Type:application/json' in response
+Writing ["{"status":"asd"}"]
+Completed 200 OK
+Starting KmsApplication using Java 1.8.0_191 on blinkbink with PID 9028 (C:\SNI\Digisign\mitraapi\kms\target\classes started by 62856 in C:\SNI\Digisign\mitraapi\kms)
+No active profile set, falling back to default profiles: default
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+Finished Spring Data repository scanning in 65 ms. Found 0 Redis repository interfaces.
+Tomcat initialized with port(s): 8089 (http)
+Root WebApplicationContext: initialization completed in 6546 ms
+ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+3 mappings in 'requestMappingHandlerMapping'
+Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+Tomcat started on port(s): 8089 (http) with context path ''
+Started KmsApplication in 15.693 seconds (JVM running for 20.643)
+Starting KmsApplication using Java 1.8.0_191 on blinkbink with PID 20104 (C:\SNI\Digisign\mitraapi\kms\target\classes started by 62856 in C:\SNI\Digisign\mitraapi\kms)
+No active profile set, falling back to default profiles: default
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+Finished Spring Data repository scanning in 35 ms. Found 0 Redis repository interfaces.
+Tomcat initialized with port(s): 8089 (http)
+Root WebApplicationContext: initialization completed in 5233 ms
+ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+3 mappings in 'requestMappingHandlerMapping'
+Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+Tomcat started on port(s): 8089 (http) with context path ''
+Started KmsApplication in 12.32 seconds (JVM running for 16.501)
+Initializing Servlet 'dispatcherServlet'
+Detected StandardServletMultipartResolver
+Detected AcceptHeaderLocaleResolver
+Detected FixedThemeResolver
+Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@19150be
+Detected org.springframework.web.servlet.support.SessionFlashMapManager@f84938
+enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+Completed initialization in 10 ms
+GET "/DSKeyCore/data", parameters={}
+Mapped to com.digisign.kms.controller.DocAccessController#getData()
+[INFO] : query
+Found 'Content-Type:application/json' in response
+Writing ["{"status":"asd"}"]
+Completed 200 OK
+Starting KmsApplication using Java 1.8.0_191 on blinkbink with PID 24220 (C:\SNI\Digisign\mitraapi\kms\target\classes started by 62856 in C:\SNI\Digisign\mitraapi\kms)
+No active profile set, falling back to default profiles: default
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+Finished Spring Data repository scanning in 51 ms. Found 0 Redis repository interfaces.
+Tomcat initialized with port(s): 8089 (http)
+Root WebApplicationContext: initialization completed in 5539 ms
+ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+3 mappings in 'requestMappingHandlerMapping'
+Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+Tomcat started on port(s): 8089 (http) with context path ''
+Started KmsApplication in 13.307 seconds (JVM running for 18.108)
+Starting KmsApplication using Java 1.8.0_191 on blinkbink with PID 9904 (C:\SNI\Digisign\mitraapi\kms\target\classes started by 62856 in C:\SNI\Digisign\mitraapi\kms)
+No active profile set, falling back to default profiles: default
+Multiple Spring Data modules found, entering strict repository configuration mode!
+Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+Finished Spring Data repository scanning in 35 ms. Found 0 Redis repository interfaces.
+Tomcat initialized with port(s): 8089 (http)
+Root WebApplicationContext: initialization completed in 5191 ms
+ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+3 mappings in 'requestMappingHandlerMapping'
+Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+Tomcat started on port(s): 8089 (http) with context path ''
+Started KmsApplication in 13.444 seconds (JVM running for 18.236)

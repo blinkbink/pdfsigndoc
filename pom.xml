@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.7.2</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>id.idtrust</groupId>
+	<artifactId>signing</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>kms</name>
+	<description>Document sign</description>
+
+	<repositories>
+		<repository>
+			<id>kms-repo</id>
+			<name>KMS Repo</name>
+			<url>C:\Users\62856\.m2\repository</url>
+		</repository>
+		<repository>
+			<id>mvn-central</id>
+			<name>Maven Repo</name>
+			<url>https://repo.maven.apache.org/maven2</url>
+		</repository>
+	</repositories>
+
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-amqp</artifactId>
+		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-data-redis</artifactId>-->
+<!--		</dependency>-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
+		<!-- Untuk Web Akses -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sun.xml.ws</groupId>
+			<artifactId>jaxws-rt</artifactId>
+			<version>2.1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ejbca.client</groupId>
+			<artifactId>ejbca-client</artifactId>
+			<version>1</version>
+			<scope>system</scope>
+			<systemPath>${pom.basedir}/lib/EJBCAWS.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>org.ejbca</groupId>
+			<artifactId>EJBCA-common</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+						<systemPath>${pom.basedir}/lib/ejbca-common.jar</systemPath>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.sun.xml.internal.ws.developer</groupId>
+			<artifactId>ws-developer</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+						<systemPath>${pom.basedir}/lib/resources.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.ejbca</groupId>
+			<artifactId>EJBCA.wss</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+						<systemPath>${pom.basedir}/lib/ejbca-ws.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- Untuk Dokumentasi API -->
+		<dependency>
+			<groupId>io.swagger</groupId>
+			<artifactId>swagger-annotations</artifactId>
+			<version>1.5.22</version>
+		</dependency>
+		<!-- Untuk log4j -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-log4j2</artifactId>
+			<version>2.7.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.google.zxing/zxing-parent -->
+		<dependency>
+			<groupId>com.google.zxing</groupId>
+			<artifactId>zxing-parent</artifactId>
+			<version>3.4.0</version>
+			<type>pom</type>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.google.zxing/core -->
+		<dependency>
+			<groupId>com.google.zxing</groupId>
+			<artifactId>core</artifactId>
+			<version>3.3.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.jws</groupId>
+			<artifactId>javax.jws-api</artifactId>
+			<version>1.1</version>
+		</dependency>
+		<!-- Thanks for using https://jar-download.com -->
+
+
+		<!-- https://mvnrepository.com/artifact/com.google.zxing/javase -->
+		<dependency>
+			<groupId>com.google.zxing</groupId>
+			<artifactId>javase</artifactId>
+			<version>3.4.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.30</version>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.amqp</groupId>
+			<artifactId>spring-rabbit-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.restdocs</groupId>
+			<artifactId>spring-restdocs-mockmvc</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.ejbca.cesecore/cesecore -->
+		<dependency>
+			<groupId>org.ejbca.cesecore</groupId>
+			<artifactId>cesecore</artifactId>
+			<version>6.4.1</version>
+			<type>pom</type>
+		</dependency>
+
+		<!--Apache PDFBox-->
+		<dependency>
+			<groupId>org.apache.pdfbox</groupId>
+			<artifactId>pdfbox-examples</artifactId>
+			<version>2.0.27</version>
+			<scope>system</scope>
+<!--						<systemPath>${pom.basedir}/lib/pdfbox-examples-3.0.0-SNAPSHOT.jar</systemPath>-->
+						<systemPath>${pom.basedir}/lib/pdfbox-examples-2.0.27.jar</systemPath>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.pdfbox/fontbox -->
+<!--		<dependency>-->
+<!--			<groupId>org.apache.pdfbox</groupId>-->
+<!--			<artifactId>fontbox</artifactId>-->
+<!--			<version>2.0.26</version>-->
+<!--		</dependency>-->
+
+
+				<dependency>
+			<groupId>org.apache.pdfbox</groupId>
+			<artifactId>pdfbox-fontbox</artifactId>
+			<version>2.0.27</version>
+			<scope>system</scope>
+<!--						<systemPath>${pom.basedir}/lib/fontbox-3.0.0-SNAPSHOT.jar</systemPath>-->
+						<systemPath>${pom.basedir}/lib/fontbox-2.0.27.jar</systemPath>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.pdfbox/pdfbox -->
+<!--		<dependency>-->
+<!--			<groupId>org.apache.pdfbox</groupId>-->
+<!--			<artifactId>pdfbox</artifactId>-->
+<!--			<version>2.0.26</version>-->
+<!--		</dependency>-->
+
+				<dependency>
+			<groupId>org.apache.pdfbox</groupId>
+			<artifactId>pdfbox</artifactId>
+			<version>2.0.27</version>
+			<scope>system</scope>
+						<systemPath>${pom.basedir}/lib/pdfbox-2.0.27.jar</systemPath>
+		</dependency>
+
+<!--		 https://mvnrepository.com/artifact/org.bouncycastle/bcpkix-jdk15on -->
+		<dependency>
+			<groupId>org.bouncycastle</groupId>
+			<artifactId>bcprov-jdk15on</artifactId>
+			<version>1.70</version>
+			<type>jar</type>
+		</dependency>
+		<dependency>
+			<groupId>org.bouncycastle</groupId>
+			<artifactId>bcutil-jdk15on</artifactId>
+			<version>1.70</version>
+			<type>jar</type>
+		</dependency>
+		<dependency>
+			<groupId>org.bouncycastle</groupId>
+			<artifactId>bcpkix-jdk15on</artifactId>
+			<version>1.70</version>
+			<type>jar</type>
+		</dependency>
+
+		<dependency>
+			<groupId>com.vaadin.external.google</groupId>
+			<artifactId>android-json</artifactId>
+			<version>0.0.20131108.vaadin1</version>
+			<scope>compile</scope>
+		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.apache.logging.log4j</groupId>-->
+<!--			<artifactId>log4j-jul</artifactId>-->
+<!--			<version>2.17.1</version>-->
+<!--		</dependency>-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.11.0</version>
+		</dependency>
+		<dependency>
+			<groupId>jakarta.validation</groupId>
+			<artifactId>jakarta.validation-api</artifactId>
+			<version>2.0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.auth0</groupId>
+			<artifactId>java-jwt</artifactId>
+			<version>2.2.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-net</groupId>
+			<artifactId>commons-net</artifactId>
+			<version>3.6</version>
+		</dependency>
+		<dependency>
+			<groupId>com.novell.ldap</groupId>
+			<artifactId>jldap</artifactId>
+			<version>4.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.cesecore.entity</groupId>
+			<artifactId>cesecore-entity</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+						<systemPath>${pom.basedir}/lib/cesecore-entity.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>core</groupId>
+			<artifactId>core</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+						<systemPath>${pom.basedir}/lib/core-2.0.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>org.cesecore.ejb</groupId>
+			<artifactId>cesecore-ejb-interface</artifactId>
+			<version>3.0.0</version>
+			<scope>system</scope>
+						<systemPath>${pom.basedir}/lib/cesecore-ejb-interface.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>org.cesecore.commons</groupId>
+			<artifactId>cesecore-commons</artifactId>
+			<version>3.0.0</version>
+			<scope>system</scope>
+						<systemPath>${pom.basedir}/lib/cesecore-common.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons.lang</groupId>
+			<artifactId>apache-commons</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+						<systemPath>${pom.basedir}/lib/commons-lang-2.4.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>org.ejbca.cesecore</groupId>
+			<artifactId>cesecore-entity</artifactId>
+			<version>7.0.0.1</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.ejbca.cesecore</groupId>
+			<artifactId>cesecore-interfaces</artifactId>
+			<version>7.0.0.1</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.itextpdf/itextpdf -->
+		<dependency>
+			<groupId>com.itextpdf</groupId>
+			<artifactId>itextpdf</artifactId>
+			<version>5.5.13.3</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.itextpdf/sign -->
+		<dependency>
+			<groupId>com.itextpdf</groupId>
+			<artifactId>sign</artifactId>
+			<version>7.2.2</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.itextpdf/kernel -->
+		<dependency>
+			<groupId>com.itextpdf</groupId>
+			<artifactId>kernel</artifactId>
+			<version>7.2.2</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.itextpdf/io -->
+		<dependency>
+			<groupId>com.itextpdf</groupId>
+			<artifactId>io</artifactId>
+			<version>7.2.2</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.itextpdf/commons -->
+		<dependency>
+			<groupId>com.itextpdf</groupId>
+			<artifactId>commons</artifactId>
+			<version>7.2.2</version>
+		</dependency>
+
+		<!--ZIPKIN-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-sleuth</artifactId>
+			<version>3.1.9</version>
+		</dependency>
+
+
+<!--		<dependency>-->
+<!--			<groupId>io.zipkin.brave</groupId>-->
+<!--			<artifactId>brave-instrumentation-servlet</artifactId>-->
+<!--			<version>5.16.0</version>-->
+<!--		</dependency>-->
+
+<!--		&lt;!&ndash; https://mvnrepository.com/artifact/io.zipkin.brave/brave-context-log4j2 &ndash;&gt;-->
+		<dependency>
+			<groupId>io.zipkin.brave</groupId>
+			<artifactId>brave-context-log4j2</artifactId>
+			<version>5.16.0</version>
+			<scope>test</scope>
+		</dependency>
+
+<!--		<dependency>-->
+<!--			<groupId>io.zipkin.brave</groupId>-->
+<!--			<artifactId>brave-spring-beans</artifactId>-->
+<!--			<version>5.16.0</version>-->
+<!--		</dependency>-->
+
+	</dependencies>
+
+
+
+	<packaging>jar</packaging>
+
+	<build>
+		<plugins>
+
+<!--			<plugin>-->
+<!--				<artifactId>maven-assembly-plugin</artifactId>-->
+<!--				<configuration>-->
+<!--					<archive>-->
+<!--						<manifest>-->
+<!--							<mainClass>id.idtrust.signing.KmsApplication</mainClass>-->
+<!--						</manifest>-->
+<!--					</archive>-->
+<!--					<descriptorRefs>-->
+<!--						<descriptorRef>jar-with-dependencies</descriptorRef>-->
+<!--					</descriptorRefs>-->
+<!--				</configuration>-->
+<!--				<executions>-->
+<!--					<execution>-->
+<!--						<id>make-assembly</id> &lt;!&ndash; this is used for inheritance merges &ndash;&gt;-->
+<!--						<phase>package</phase> &lt;!&ndash; bind to the packaging phase &ndash;&gt;-->
+<!--						<goals>-->
+<!--							<goal>single</goal>-->
+<!--						</goals>-->
+<!--					</execution>-->
+<!--				</executions>-->
+<!--			</plugin>-->
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M5</version>
+				<configuration>
+					<skipTests>true</skipTests>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>
+								${project.build.directory}/target
+							</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-ejb-plugin</artifactId>
+				<version>3.1.0</version>
+				<configuration>
+					<!-- this is false by default -->
+					<generateClient>true</generateClient>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.asciidoctor</groupId>
+				<artifactId>asciidoctor-maven-plugin</artifactId>
+				<version>1.5.8</version>
+				<executions>
+					<execution>
+						<id>generate-docs</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>process-asciidoc</goal>
+						</goals>
+						<configuration>
+							<backend>html</backend>
+							<doctype>book</doctype>
+						</configuration>
+					</execution>
+				</executions>
+				<dependencies>
+					<dependency>
+						<groupId>org.springframework.restdocs</groupId>
+						<artifactId>spring-restdocs-asciidoctor</artifactId>
+						<version>${spring-restdocs.version}</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>${parent.version}</version>
+				<configuration>
+					<includeSystemScope>true</includeSystemScope>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+
+</project>
